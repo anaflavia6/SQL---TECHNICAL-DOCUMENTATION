@@ -12,11 +12,14 @@ Não se pode pintar um carro antes dele estar montado, o processo no **Database 
 3. **SELECT (The Choice):** Só após juntar todas as partes que você poderá chamar aquele conjunto de metais de "carro" e então escolher a cor da pintura (**Projection**). Aqui definimos quais colunas serão exibidas.
     
 4. **ORDER BY (Final Polish):** Faz a organização estética para garantir uma boa apresentação final (**Sorting**). É o polimento que coloca os resultados na sequência correta (alfabética ou numérica).
+
+   -- É uma analogia que me ajudou a entender melhor
    
     <img width="1024" height="768" alt="diagrama anaflavia" src="https://github.com/user-attachments/assets/3e402d85-a027-4350-bfa0-43038dbda130" />
 
 
 A ideia de filtrar os dados no **WHERE** antes de escolher o que vai aparecer no **SELECT** é porque garante uma testagem se a pesquisa está sendo bem executada (**Performance and Validation**). Ter os comandos de "sim ou não" ajuda a sinalizar erros e otimizar o tempo de resposta do banco de dados antes de prosseguir para as etapas finais.
+ -- Para pessoas mais avançadas esse conceito talvez seja pequeno demais, mas no momento ajuda a construir uma base 
 
 ## Applied Challenges (Desafios Aplicados)
 
