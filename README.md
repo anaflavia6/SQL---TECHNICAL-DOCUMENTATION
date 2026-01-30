@@ -18,6 +18,47 @@ Não se pode pintar um carro antes dele estar montado, o processo no **Database 
 
 A ideia de filtrar os dados no **WHERE** antes de escolher o que vai aparecer no **SELECT** é porque garante uma testagem se a pesquisa está sendo bem executada (**Performance and Validation**). Ter os comandos de "sim ou não" ajuda a sinalizar erros e otimizar o tempo de resposta do banco de dados antes de prosseguir para as etapas finais.
 
+## Applied Challenges (Desafios Aplicados)
+
+Abaixo estão os padrões de código utilizados para validar os conceitos acima:
+
+### 1. Basic Selection & Sorting
+
+O exemplo mais simples de "montagem" e "pintura", apenas listando e ordenando.
+
+SQL
+
+```
+SELECT name 
+FROM Employee 
+ORDER BY name ASC;
+```
+
+### 2. Multiple Constraints (Filtros no WHERE)
+
+Aqui aplicamos o fluxo de decisão "Sim ou Não" com duas condições obrigatórias.
+
+SQL
+
+```
+SELECT name 
+FROM Employee 
+WHERE salary > 2000 AND months < 10 
+ORDER BY employee_id ASC;
+```
+
+### 3. String Manipulation & Tie-break
+
+Neste caso, usamos a leitura de trás para frente para organizar os dados pelos últimos caracteres, usando o ID como critério de desempate.
+
+SQL
+
+```
+SELECT name 
+FROM Students 
+WHERE marks > 75 
+ORDER BY RIGHT(name, 3) ASC, id ASC;
+
 
 <img width="1363" height="597" alt="image" src="https://github.com/user-attachments/assets/e64faba2-029e-48e5-bce1-0cfbc06b8146" />
 
